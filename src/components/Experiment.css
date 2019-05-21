@@ -1,0 +1,22 @@
+.wrapper {
+  width: 1024px;
+  height: 768px;
+  border: 1px solid #000;
+  position: relative;
+}
+
+.monster {
+  background: red;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.green-dot {
+  background: green;
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  left: 497px;
+  top: 369px;
+  border-radius: 50%;
+}
