@@ -1,3 +1,11 @@
+.experiment {
+  display: flex;
+}
+
+.experiment > textarea {
+  flex: 1;
+}
+
 .wrapper {
   width: 1024px;
   height: 768px;

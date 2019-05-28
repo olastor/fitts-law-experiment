@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import './Experiment.css'
 import { random } from 'lodash'
 
@@ -12,7 +12,9 @@ class Experiment extends React.Component {
     currentChaseStartTime: 0,
     currentDiameter: 0,
     currentMonsterOffsetX: 0,
-    currentMonsterOffsetY: 0
+    currentMonsterOffsetY: 0,
+    counter: 0,
+    sessionId: `fitts-experiment-${new Date().toISOString()}`
   }
 
   /**
@@ -53,7 +55,9 @@ class Experiment extends React.Component {
       currentChaseStartTime,
       currentMonsterOffsetX,
       currentMonsterOffsetY,
-      experimentResults
+      experimentResults,
+      counter,
+      sessionId
     } = this.state
 
     const elapsedTime = new Date() - currentChaseStartTime
@@ -70,37 +74,47 @@ class Experiment extends React.Component {
       isWaitingForChasing: false,
       currentDiameter: 0,
       currentMonsterOffsetX: 0,
-      currentMonsterOffsetY: 0
-    })
+      currentMonsterOffsetY: 0,
+      counter: counter + 1
+    }, () => localStorage.setItem(sessionId, this.state.experimentResults))
   }
 
   render() {
     const {
       isChasing,
       isWaitingForChasing,
+      experimentResults,
       currentDiameter,
       currentMonsterOffsetX,
-      currentMonsterOffsetY
+      currentMonsterOffsetY,
+      counter
     } = this.state
 
-    return <div className='wrapper'>
-      { isChasing
-        ? <div
-            className='monster'
-            onClick={this.handleStopChasing}
-            style={{
-              width: currentDiameter,
-              height: currentDiameter,
-              top: currentMonsterOffsetY,
-              left: currentMonsterOffsetX
-            }}
-          />
-        : !isWaitingForChasing && <div
-            className='green-dot'
-            onMouseOver={this.handleStartChasing}
-          />
-      }
-    </div>
+    return <Fragment>
+      <div className='experiment'>
+        <div className='wrapper'>
+          { isChasing
+            ? <div
+                className='monster'
+                onClick={this.handleStopChasing}
+                style={{
+                  width: currentDiameter,
+                  height: currentDiameter,
+                  top: currentMonsterOffsetY,
+                  left: currentMonsterOffsetX
+                }}
+              />
+            : <div
+              className='green-dot'
+              style={isWaitingForChasing ? { opacity: 0.4 } : {}}
+              onMouseOver={this.handleStartChasing}
+            />
+          }
+        </div>
+        <textarea rows={10} value={JSON.stringify(experimentResults, null, 2)}/>
+      </div>
+      <div>{counter} / 120</div>
+    </Fragment>
   }
 }
 
