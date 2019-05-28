@@ -92,25 +92,27 @@ class Experiment extends React.Component {
 
     return <Fragment>
       <div className='experiment'>
-        <div className='wrapper'>
-          { isChasing
-            ? <div
-                className='monster'
-                onClick={this.handleStopChasing}
-                style={{
-                  width: currentDiameter,
-                  height: currentDiameter,
-                  top: currentMonsterOffsetY,
-                  left: currentMonsterOffsetX
-                }}
+        { counter < 120 &&
+          <div className='wrapper'>
+            { isChasing
+              ? <div
+                  className='monster'
+                  onClick={this.handleStopChasing}
+                  style={{
+                    width: currentDiameter,
+                    height: currentDiameter,
+                    top: currentMonsterOffsetY,
+                    left: currentMonsterOffsetX
+                  }}
+                />
+              : <div
+                className='green-dot'
+                style={isWaitingForChasing ? { opacity: 0.4 } : {}}
+                onMouseOver={this.handleStartChasing}
               />
-            : <div
-              className='green-dot'
-              style={isWaitingForChasing ? { opacity: 0.4 } : {}}
-              onMouseOver={this.handleStartChasing}
-            />
-          }
-        </div>
+            }
+          </div>
+        }
         <textarea rows={10} value={JSON.stringify(experimentResults, null, 2)}/>
       </div>
       <div>{counter} / 120</div>
