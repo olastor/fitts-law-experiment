@@ -4,6 +4,8 @@ import { random } from 'lodash'
 
 const DIAMETERS = [5, 10, 15, 20, 30, 40, 50]
 
+const SESSION_ID = `fitts-experiment-${new Date().toISOString()}`
+
 class Experiment extends React.Component {
   state = {
     isChasing: false,
@@ -13,8 +15,7 @@ class Experiment extends React.Component {
     currentDiameter: 0,
     currentMonsterOffsetX: 0,
     currentMonsterOffsetY: 0,
-    counter: 0,
-    sessionId: `fitts-experiment-${new Date().toISOString()}`
+    counter: 0
   }
 
   /**
@@ -56,8 +57,7 @@ class Experiment extends React.Component {
       currentMonsterOffsetX,
       currentMonsterOffsetY,
       experimentResults,
-      counter,
-      sessionId
+      counter
     } = this.state
 
     const elapsedTime = new Date() - currentChaseStartTime
@@ -76,7 +76,7 @@ class Experiment extends React.Component {
       currentMonsterOffsetX: 0,
       currentMonsterOffsetY: 0,
       counter: counter + 1
-    }, () => localStorage.setItem(sessionId, this.state.experimentResults))
+    }, () => localStorage.setItem(SESSION_ID, JSON.stringify(this.state.experimentResults)))
   }
 
   render() {
