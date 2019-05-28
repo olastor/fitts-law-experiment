@@ -92,7 +92,7 @@ class Experiment extends React.Component {
 
     return <Fragment>
       <div className='experiment'>
-        { counter < 120 &&
+        { counter < 140 &&
           <div className='wrapper'>
             { isChasing
               ? <div
@@ -115,7 +115,7 @@ class Experiment extends React.Component {
         }
         <textarea rows={10} value={JSON.stringify(experimentResults, null, 2)}/>
       </div>
-      <div>{counter} / 120</div>
+      <div>{counter} / 140</div>
     </Fragment>
   }
 }
