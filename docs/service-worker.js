@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "https://olastor.github.io/fitts-law-experiment/precache-manifest.7dac1475ecc072c8fe9fcf3601814a68.js"
+  "https://olastor.github.io/fitts-law-experiment/precache-manifest.bd23dcf7f0ee9af78a5b47e185f44d85.js"
 );
 
 self.addEventListener('message', (event) => {
