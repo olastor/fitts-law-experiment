@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.7bb91b9a.chunk.css",
-    "main.js": "/static/js/main.9ca72a3a.chunk.js",
-    "main.js.map": "/static/js/main.9ca72a3a.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/js/2.b68966f9.chunk.js": "/static/js/2.b68966f9.chunk.js",
-    "static/js/2.b68966f9.chunk.js.map": "/static/js/2.b68966f9.chunk.js.map",
-    "index.html": "/index.html",
-    "precache-manifest.249dc9a7b05ae2e31182d8081ea06c31.js": "/precache-manifest.249dc9a7b05ae2e31182d8081ea06c31.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.7bb91b9a.chunk.css.map": "/static/css/main.7bb91b9a.chunk.css.map"
+    "main.css": "https://olastor.github.io/fitts-law-experiment/static/css/main.7bb91b9a.chunk.css",
+    "main.js": "https://olastor.github.io/fitts-law-experiment/static/js/main.65f14f4d.chunk.js",
+    "main.js.map": "https://olastor.github.io/fitts-law-experiment/static/js/main.65f14f4d.chunk.js.map",
+    "runtime~main.js": "https://olastor.github.io/fitts-law-experiment/static/js/runtime~main.185e173e.js",
+    "runtime~main.js.map": "https://olastor.github.io/fitts-law-experiment/static/js/runtime~main.185e173e.js.map",
+    "static/js/2.b68966f9.chunk.js": "https://olastor.github.io/fitts-law-experiment/static/js/2.b68966f9.chunk.js",
+    "static/js/2.b68966f9.chunk.js.map": "https://olastor.github.io/fitts-law-experiment/static/js/2.b68966f9.chunk.js.map",
+    "index.html": "https://olastor.github.io/fitts-law-experiment/index.html",
+    "precache-manifest.7dac1475ecc072c8fe9fcf3601814a68.js": "https://olastor.github.io/fitts-law-experiment/precache-manifest.7dac1475ecc072c8fe9fcf3601814a68.js",
+    "service-worker.js": "https://olastor.github.io/fitts-law-experiment/service-worker.js",
+    "static/css/main.7bb91b9a.chunk.css.map": "https://olastor.github.io/fitts-law-experiment/static/css/main.7bb91b9a.chunk.css.map"
   }
 }
