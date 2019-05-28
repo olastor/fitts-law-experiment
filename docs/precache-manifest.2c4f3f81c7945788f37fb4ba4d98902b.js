@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "63db4eb97b19457e859d30aa3a5d04af",
+    "revision": "0d10485827257f76c0ee10e65a7f6b21",
     "url": "https://olastor.github.io/fitts-law-experiment/index.html"
   },
   {
-    "revision": "78bae75d1ddc32ff92e6",
+    "revision": "c5c64071c53bf46ce059",
     "url": "https://olastor.github.io/fitts-law-experiment/static/css/main.7bb91b9a.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "https://olastor.github.io/fitts-law-experiment/static/js/2.b68966f9.chunk.js"
   },
   {
-    "revision": "78bae75d1ddc32ff92e6",
-    "url": "https://olastor.github.io/fitts-law-experiment/static/js/main.f529ede8.chunk.js"
+    "revision": "c5c64071c53bf46ce059",
+    "url": "https://olastor.github.io/fitts-law-experiment/static/js/main.31c35247.chunk.js"
   },
   {
     "revision": "d3e38a2a8870caa48cdd",
